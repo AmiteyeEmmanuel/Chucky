@@ -14,7 +14,7 @@ function Sidebar({ menuCollapsed }: SidebarProps) {
 
   return (
     <div
-      className={`flex flex-col h-full justify-between px-5 bg-white pt-8 transform transition-transform duration-300 ${
+      className={`flex flex-col  h-full md:h-[1150px] justify-between px-5 bg-white pt-8 transform transition-transform duration-300 ${
         menuCollapsed ? "-translate-x-full" : "translate-x-0"
       } fixed z-40 top-0 left-0 w-[271px] md:relative md:translate-x-0 md:block`}
     >

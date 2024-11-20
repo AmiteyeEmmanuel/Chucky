@@ -22,7 +22,7 @@ const CircularProgress: React.FC = () => {
   }, []);
 
   return (
-    <div className="flex flex-col  w-[229px] h-[199px] relative top-[254px] p-[18px] gap-[16px] rounded-[10px] bg-[#F8F9FB] shadow-md">
+    <div className="flex flex-col w-[229px] h-[199px] relative top-[280px] p-[18px] gap-[16px] rounded-[10px] bg-[#F8F9FB] shadow-md">
       {/* Circular Progress Container */}
       <div className="relative flex items-center justify-center w-[55px] h-[55px] gap-[10px]">
         {/* Circular Line Progress */}
