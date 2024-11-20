@@ -81,7 +81,7 @@ export function PieGraph() {
         </div>
       </section>
       <div className="md:flex gap-6 transition-all mt-10 px-4 w-full mb-10">
-        <CardContent className="flex pb-0 h-[220px] w-[50%] md:mx-0  mx-auto relative md:right-0 right-20">
+        <CardContent className="flex pb-0 h-[220px] md:w-[50%] w-full  md:mx-0  mx-auto relative">
           <ChartContainer
             config={chartConfig}
             className="aspect-square max-h-[250px]"
