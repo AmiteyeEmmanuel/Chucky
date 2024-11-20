@@ -5,39 +5,35 @@ import { Menu } from "../../../context/user_menu";
 import { Logo } from "../../../assets";
 import CircularProgress from "../../../widgets/progress_bar";
 
-interface SidebarProps { 
+interface SidebarProps {
   menuCollapsed: boolean;
 }
-
 function Sidebar({ menuCollapsed }: SidebarProps) {
   const [hoveredMenu, setHoveredMenu] = useState<string | null>(null);
   const location = useLocation();
 
-  const menuRendered = Menu;
-
   return (
     <div
-      className={`flex flex-col w-[271px] h-[1150px] justify-between px-5 bg-white pt-8 ${menuCollapsed ? 'max-w-[100px]' : ''}`}>
+      className={`flex flex-col h-full justify-between px-5 bg-white pt-8 transform transition-transform duration-300 ${
+        menuCollapsed ? "-translate-x-full" : "translate-x-0"
+      } fixed z-40 top-0 left-0 w-[271px] md:relative md:translate-x-0 md:block`}
+    >
+      {/* Sidebar Content */}
       <div>
         {/* Dashboard logo */}
-        <div className={`mb-2 ${menuCollapsed ? "text-center" : ""}`}>
-          <div className="">
-            <Link
-              to="/"
-              className={`cursor-pointer ${menuCollapsed ? "block" : ""}`}
-            >
-              <img
-                src={Logo}
-                className={`transition-all duration-300 w-full h-full ${
-                  menuCollapsed ? "w-full h-full mx-auto" : "w-full h-full"
-                }`}
-              />
-            </Link>
-          </div>
+        <div className="mb-2 text-center">
+          <Link to="/">
+            <img
+              src={Logo}
+              className="transition-all duration-300 w-full h-full"
+              alt="Logo"
+            />
+          </Link>
         </div>
 
+        {/* Menu Items */}
         <div className="mt-24">
-          {menuRendered.map((menu) => {
+          {Menu.map((menu) => {
             const isActive = location.pathname === menu.path;
             return (
               <div
@@ -48,22 +44,17 @@ function Sidebar({ menuCollapsed }: SidebarProps) {
                     : hoveredMenu === menu.path
                     ? "bg-purple text-white rounded-xl py-3 px-2"
                     : ""
-                } ${menuCollapsed ? "" : ''}`}
-                onMouseEnter={() => {
-                  setHoveredMenu(menu.path);
-                }}
-                onMouseLeave={() => {
-                  setHoveredMenu(null);
-                }}
+                }`}
+                onMouseEnter={() => setHoveredMenu(menu.path)}
+                onMouseLeave={() => setHoveredMenu(null)}
               >
                 <a
                   href={menu.path}
-                  className={`w-6 cursor-pointer text-black ${
-                    isActive ? "text-white" : ""
+                  className={`w-6 cursor-pointer ${
+                    isActive ? "text-white" : "text-black"
                   }`}
                 >
                   <img
-                    className="fill-current text-white"
                     src={
                       isActive || hoveredMenu === menu.path
                         ? menu.activeIcon
@@ -72,7 +63,7 @@ function Sidebar({ menuCollapsed }: SidebarProps) {
                     alt={menu.name}
                   />
                 </a>
-                {!menuCollapsed &&
+                {!menuCollapsed && (
                   <a
                     className={`cursor-pointer ${
                       isActive ? "text-white py-1 rounded-xl" : ""
@@ -81,10 +72,9 @@ function Sidebar({ menuCollapsed }: SidebarProps) {
                   >
                     {menu.name}
                   </a>
-                }
-
-                  {/* Icon2 (Optional) */}
-                  {menu.icon2 && (
+                )}
+                {/* Icon2 (Optional) */}
+                {menu.icon2 && (
                   <button className="relative left-[60px] hidden md:block">
                     <img
                       src={menu.icon2}
@@ -93,20 +83,19 @@ function Sidebar({ menuCollapsed }: SidebarProps) {
                     />
                   </button>
                 )}
-                
               </div>
-
-        
             );
           })}
         </div>
+      </div>
 
-        <div className="lg:block hidden">
-          <CircularProgress />
-        </div>
+      {/* Progress Bar */}
+      <div className="lg:block hidden">
+        <CircularProgress />
       </div>
     </div>
   );
 }
 
 export default Sidebar;
+
