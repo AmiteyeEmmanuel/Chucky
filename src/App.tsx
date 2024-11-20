@@ -1,7 +1,5 @@
 import { Suspense, lazy } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import UpdateCustomerList from "./pages/updateCustomer";
-
 
 const Dashboard = lazy(() => import("./pages/dashboard"));
 const Customer = lazy(() => import("./pages/customer"));
@@ -26,7 +24,6 @@ function App() {
           
           {/* // customers */}
           <Route path="/customers" element={<Customer />} />
-          <Route path="/customers/edit/:id" element={<UpdateCustomerList />} />
           {/* //end  customers */}
 
           <Route path="/menu" element={<Menu />} />
