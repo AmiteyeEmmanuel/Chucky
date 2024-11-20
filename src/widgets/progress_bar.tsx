@@ -22,12 +22,12 @@ const CircularProgress: React.FC = () => {
   }, []);
 
   return (
-    <div className="flex flex-col w-[229px] h-[199px] relative top-[280px] p-[18px] gap-[16px] rounded-[10px] bg-[#F8F9FB] shadow-md">
+    <div className="flex flex-col  w-full h-[230px] relative top-[254px] p-[18px] gap-[16px] rounded-[10px] bg-[#F8F9FB] shadow-md">
       {/* Circular Progress Container */}
-      <div className="relative flex items-center justify-center w-[55px] h-[55px] gap-[10px]">
+      <div className="relative flex items-center justify-center w-[65px] h-[65px] gap-[10px]">
         {/* Circular Line Progress */}
         <div
-          className="absolute top-0 left-0 w-full h-full rounded-full"
+          className="relative top-0 left-0 w-[50px] h-[50px] rounded-full"
           style={{
             background: `conic-gradient(
               #6C5DD3 ${progress * 3.6}deg,
@@ -37,7 +37,7 @@ const CircularProgress: React.FC = () => {
         ></div>
 
         {/* Inner Circle */}
-        <div className="absolute flex items-center justify-center w-[45px] h-[45px] bg-white rounded-full">
+        <div className="absolute flex items-center justify-center w-[40px] h-[40px] bg-white rounded-full">
           <span className="text-[13px] font-semibold text-[#6C5DD3]">
             {progress}%
           </span>
