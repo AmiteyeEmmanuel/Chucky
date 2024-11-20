@@ -26,7 +26,6 @@ const customerSlice = createSlice({
   reducers: {
     addCustomer: (state, action: PayloadAction<Customer>) => {
       state.customers.push(action.payload);
-      // localStorage.setItem("customers", JSON.stringify(state.customers));
     },
     updateCustomer: (state, action: PayloadAction<Customer>) => {
       const index = state.customers.findIndex(

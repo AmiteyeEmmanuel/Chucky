@@ -11,7 +11,7 @@ import { addMenu1Reducer, addMenu2Reducer, addMenuReducer } from './menu/menuSli
 const persistConfig = {
   key: 'root',
   storage,
-  timeout: 50, 
+  timeout: 1000, 
 };
 
 // Combine Reducers

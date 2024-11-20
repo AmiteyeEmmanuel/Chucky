@@ -7,7 +7,6 @@ export default function CreateModal({ isOpen, closeModal }: any) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [image, setImage] = useState<string | null>(null);
-  // const customers = useSelector((state : any) =>  state.customers)
   const dispatch = useDispatch();
 
   const handleImageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -101,3 +100,4 @@ export default function CreateModal({ isOpen, closeModal }: any) {
     </div>
   );
 }
+

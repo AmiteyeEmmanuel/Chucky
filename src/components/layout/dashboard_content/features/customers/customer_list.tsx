@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+
 import { PenIcon, Trash2Icon } from "lucide-react";
 import CreateModal from "../../../../../utils/customer_modal/create_modal";
 import { deleteCustomer } from "../../../../../redux/customer/customerSlice";
@@ -9,19 +10,21 @@ const CustomerList = () => {
   const customers = useSelector((state: any) => state.customers.customers);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedCustomer, setSelectedCustomer] = useState(null);
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
 
-  const openModal = (customer: any) => {
+  const openUpdateModal = (customer: any) => {
     setSelectedCustomer(customer);
     setIsModalOpen(true);
   };
 
-  const closeModal = () => {
+  const closeUpdateModal = () => {
     setIsModalOpen(false);
     setSelectedCustomer(null);
   };
 
   const [currentPage, setCurrentPage] = useState(1);
-  const customersPerPage = 5;
+  const customersPerPage = 9;
 
   // Pagination Logic
   const totalPages = Math.ceil(customers.length / customersPerPage);
@@ -101,7 +104,7 @@ const CustomerList = () => {
                 </td>
                 <td className="px-8 py-4 text-right text-sm font-medium">
                   <div className="flex gap-3 justify-end">
-                    <button onClick={() => openModal(customer)}>
+                    <button onClick={() => openUpdateModal(customer)}>
                       <PenIcon className="w-5 h-5 text-blue-500 hover:text-blue-700" />
                     </button>
                     <button
@@ -122,7 +125,7 @@ const CustomerList = () => {
       {selectedCustomer && (
         <UpdateModal
           isOpen={isModalOpen}
-          closeModal={closeModal}
+          closeModal={closeUpdateModal}
           customer={selectedCustomer}
         />
       )}
