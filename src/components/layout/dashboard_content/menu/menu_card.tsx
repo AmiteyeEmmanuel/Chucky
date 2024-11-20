@@ -107,7 +107,7 @@ function MenuCard() {
                         <img
                           src={menu.image}
                           alt={menu.name}
-                          className="w-full h-[200px] rounded-lg"
+                          className="w-full h-[250px] rounded-lg"
                         />
                       </div>
                     )}
@@ -142,7 +142,7 @@ function MenuCard() {
                         <img
                           src={menu1.image}
                           alt={menu1.name}
-                          className="w-full h-[200px] rounded-lg"
+                          className="w-full h-[250px] rounded-lg"
                         />
                       </div>
                     )}
@@ -179,7 +179,7 @@ function MenuCard() {
                   <img
                     src={menu2.image}
                     alt={menu2.name}
-                    className="w-full h-[200px] rounded-lg"
+                    className="w-full h-[230px] rounded-lg"
                   />
                 </div>
               )}
