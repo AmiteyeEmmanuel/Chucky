@@ -3,7 +3,7 @@ import { Card, CardContent } from '../../../../ui/card'
 
 function  CustomerMap() {
   return (
-    <Card className="flex flex-col h-auto">
+    <Card className="flex flex-col h-[45vh]">
     <section className="flex justify-between gap-2 text-black border-b p-6 mb-4">
       <div className="flex flex-col">
         <p className=" font-[800] text-[18px] leading-[24px]"> Customers Map </p>
