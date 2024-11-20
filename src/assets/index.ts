@@ -19,7 +19,7 @@ import Logo from "./logo.jpg";
 import searchIcon from "./img/search.jpg";
 import noficationBell from "./img/notification.jpg";
 import messageIcon from "./img/message.jpg";
-import avatar from "./img/Avatar.jpg";
+import avatar from "./img/avatar.jpg";
 
 //card
 import Card1 from './img/card1.jpg'
