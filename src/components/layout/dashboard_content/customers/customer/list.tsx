@@ -29,7 +29,7 @@ function List() {
                     <img
                       src={customer.image}
                       alt={customer.name}
-                      className="md:w-[40px] md:h-[40px] rounded-full hidden  md:block"
+                      className="w-[40px] h-[40px] rounded-full block"
                     />
                   </div>
                 )}
