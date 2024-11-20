@@ -1,11 +1,33 @@
 # React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Url 
+```
+https://chucky-xi.vercel.app/
 
-Currently, two official plugins are available:
+```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+git clone <repository-url>
+cd <project-directory>
+
+```bash
+npm install
+```
+
+## Usage
+
+1. Start the Development Server:
+
+```bash
+npm run dev
+```
+
+
+## Demo Preview
+![alt text](demo.png)
+
+## Store Management Setup
+2. Redux Store: The store is configured with slices for modular state management.
+3. React-Persist: Ensures the Redux state persists across sessions using local storage.
 
 ## Expanding the ESLint configuration
 
@@ -13,7 +35,7 @@ If you are developing a production application, we recommend updating the config
 
 - Configure the top-level `parserOptions` property like this:
 
-```js
+```tsx
 export default tseslint.config({
   languageOptions: {
     // other options...
