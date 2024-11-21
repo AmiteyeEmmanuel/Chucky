@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { updateMenu } from "../../../redux/menu/menuSlice";
+import { updateMenu1 } from "../../../redux/menu/menuSlice";
 
 interface UpdateModalProps {
   isOpen: boolean;
@@ -15,7 +15,7 @@ interface UpdateModalProps {
   };
 }
 
-export default function MenuUpdate({
+export default function MenuUpdate1({
   isOpen,
   closeModal,
   menu,
@@ -50,7 +50,7 @@ export default function MenuUpdate({
     event.preventDefault();
 
     dispatch(
-      updateMenu({
+      updateMenu1({
         id,
         name: Name,
         price: Price,

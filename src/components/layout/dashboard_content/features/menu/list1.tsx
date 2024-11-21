@@ -2,12 +2,26 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../../../../redux/store";
 import { PenIcon, Trash2Icon } from "lucide-react";
-import { Link } from "react-router-dom";
 import { deleteMenu1 } from "../../../../../redux/menu/menuSlice";
 import MenuModal1 from "../../../../../utils/menu_modal/modal1";
+import MenuUpdate1 from "../../../../../utils/menu_modal/update/menu_update1";
 
 export default function List1() {
   const menus = useSelector((state: RootState) => state.menu1.menus);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedMenu, setSelectedMenu] = useState(null);
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
+  const openUpdateModal = (menus: any) => {
+    setSelectedMenu(menus);
+    setIsModalOpen(true);
+  };
+
+  const closeUpdateModal = () => {
+    setIsModalOpen(false);
+    setSelectedMenu(null);
+  };
 
   const [currentPage, setCurrentPage] = useState(1);
   const menuPerPage = 7;
@@ -34,10 +48,6 @@ export default function List1() {
   const handleDelete = (id: any) => {
     dispatch(deleteMenu1({ id }));
   };
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
 
   return (
     <>
@@ -103,9 +113,9 @@ export default function List1() {
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                   <div className="flex gap-3 justify-end">
-                    <Link to={`/customers/edit/${menu.id}`} title="Edit">
+                    <button onClick={() => openUpdateModal(menu)}>
                       <PenIcon className="w-5 h-5 text-blue-500 hover:text-blue-700" />
-                    </Link>
+                    </button>
                     <button
                       onClick={() => handleDelete(menu.id)}
                       title="Delete"
@@ -120,6 +130,14 @@ export default function List1() {
           </tbody>
         </table>
       </div>
+
+      {selectedMenu && (
+        <MenuUpdate1
+          isOpen={isModalOpen}
+          closeModal={closeUpdateModal}
+          menu={selectedMenu}
+        />
+      )}
 
       {/* Pagination */}
       <div className="flex justify-between items-center mt-4">

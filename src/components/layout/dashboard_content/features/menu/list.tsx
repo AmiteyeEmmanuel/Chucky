@@ -114,7 +114,7 @@ export default function List() {
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                   <div className="flex gap-3 justify-end">
-                    <button onClick={() => openUpdateModal(menus)}>
+                    <button onClick={() => openUpdateModal(menu)}>
                       <PenIcon className="w-5 h-5 text-blue-500 hover:text-blue-700" />
                     </button>
                     <button
@@ -136,7 +136,7 @@ export default function List() {
         <MenuUpdate
           isOpen={isModalOpen}
           closeModal={closeUpdateModal}
-          menus={selectedMenu}
+          menu={selectedMenu}
         />
       )}
 
