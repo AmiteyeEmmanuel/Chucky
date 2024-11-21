@@ -23,7 +23,6 @@ npm run dev
 
 
 ## Demo Preview
-![alt text](/public/preview/demo.png)
 ![alt text](/public/preview/image.png)
 
 

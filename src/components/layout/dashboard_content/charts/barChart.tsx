@@ -81,7 +81,7 @@ export const BarChart = () => {
     <Card className="flex flex-col">
       <section className="flex justify-between gap-2 text-black border-b p-8  mb-4">
         <p className=" font-[800] text-[18px] leading-[24px] font-sans"> Revenue </p>
-        <div className="">
+        <div className="cursor-pointer">
           <button
             className="cursor-pointer"
             onClick={isModalOpen ? closeModal : openModal}
