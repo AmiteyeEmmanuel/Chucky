@@ -113,7 +113,7 @@ function MenuCard() {
                     )}
                        <div className="relative mb-[-73px] md:w-[95%] w-[90%] mx-4 px-4 py-4 bg-white opacity-80 lg:h-[79px] h-[79px] rounded-[6px] border bottom-[6rem] flex justify-between">
                       <div>
-                        <p className="text-[14px] xl:w-[180px] w-[100px] font-[700] leading-[20px] text-[#1E293B]">
+                        <p className="text-[14px] w-auto font-[700] leading-[20px] text-[#1E293B]">
                           {menu.name}
                         </p>
                         <p className="text-[14px] font-[400] leading-[20px] text-[#64748B] ">
@@ -148,7 +148,7 @@ function MenuCard() {
                     )}
                     <div className="relative mb-[-73px] md:w-[93%] w-[90%] mx-4 px-4 py-4 bg-white opacity-80 lg:h-[79px] h-[79px] rounded-[6px] border bottom-[6rem] flex justify-between">
                       <div>
-                        <p className="text-[14px] xl:w-[180px] w-[100px] font-[700] leading-[20px] text-[#1E293B]">
+                        <p className="text-[14px] w-auto font-[700] leading-[20px] text-[#1E293B]">
                           {menu1.name}
                         </p>
                         <p className="text-[14px] font-[400] leading-[20px] text-[#64748B] ">
@@ -185,7 +185,7 @@ function MenuCard() {
               )}
               <div className="relative mb-[-73px] w-[90%] mx-4 px-4 py-4 bg-white opacity-80 lg:h-[79px] h-[79px] rounded-[6px] border bottom-[6rem] flex justify-between">
                 <div>
-                  <p className="text-[14px] xl:w-[180px] w-[100px] font-[700] leading-[20px] text-[#1E293B]">
+                  <p className="text-[14px] w-auto font-[700] leading-[20px] text-[#1E293B]">
                     {menu2.name}
                   </p>
                   <p className="text-[14px] font-[400] leading-[20px] text-[#64748B] ">
