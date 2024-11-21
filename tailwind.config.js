@@ -8,7 +8,8 @@ export default {
   theme: {
   	extend: {
   		fontFamily: {
-  			sans: ['Inter']
+  			sans: ['Inter'],
+			custom: [ 'Crete Round']
   		},
   		colors: {
   			white: '#fff',

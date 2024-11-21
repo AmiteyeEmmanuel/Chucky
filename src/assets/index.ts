@@ -15,7 +15,7 @@ import activeAnalyticsIcon from "./svg/Chart.svg";
 import activeDashboardIcon from "./img/dashboardicon.jpg";
 
 // img
-import Logo from "./logo.jpg";
+import Logo from "./svg/logo.svg";
 import searchIcon from "./img/search.jpg";
 import noficationBell from "./img/notification.jpg";
 import messageIcon from "./img/message.jpg";
@@ -55,5 +55,5 @@ export {
   GreenChart,
   PurpleChart,
   Mapsicle,
-  ArrowIcon
+  ArrowIcon,
 };
