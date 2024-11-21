@@ -2,7 +2,6 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../../../../redux/store";
 import { PenIcon, Trash2Icon } from "lucide-react";
-import { Link } from "react-router-dom";
 import { deleteMenu2 } from "../../../../../redux/menu/menuSlice";
 import MenuModal2 from "../../../../../utils/menu_modal/modal2";
 import MenuUpdate2 from "../../../../../utils/menu_modal/update/menu_update";
