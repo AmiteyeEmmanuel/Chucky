@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { updateMenu2 } from "../../../redux/menu/menuSlice";
+import {  updateMenu2 } from "../../../redux/menu/menuSlice";
 
 interface UpdateModalProps {
   isOpen: boolean;
@@ -15,7 +15,7 @@ interface UpdateModalProps {
   };
 }
 
-export default function MenuUpdate({
+export default function MenuUpdate2({
   isOpen,
   closeModal,
   menu,

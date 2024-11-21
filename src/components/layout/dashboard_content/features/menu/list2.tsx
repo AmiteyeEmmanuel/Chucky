@@ -3,8 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../../../../redux/store";
 import { PenIcon, Trash2Icon } from "lucide-react";
 import { deleteMenu2 } from "../../../../../redux/menu/menuSlice";
+import MenuUpdate2 from "../../../../../utils/menu_modal/update/menu_update2";
 import MenuModal2 from "../../../../../utils/menu_modal/modal2";
-import MenuUpdate2 from "../../../../../utils/menu_modal/update/menu_update";
 
 export default function List2() {
   const menus = useSelector((state: RootState) => state.menu2.menus);
@@ -13,8 +13,8 @@ export default function List2() {
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
 
-  const openUpdateModal = (menus: any) => {
-    setSelectedMenu(menus);
+  const openUpdateModal = (menu: any) => {
+    setSelectedMenu(menu);
     setIsModalOpen(true);
   };
 

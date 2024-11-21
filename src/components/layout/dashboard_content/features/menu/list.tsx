@@ -13,8 +13,8 @@ export default function List() {
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
 
-  const openUpdateModal = (menus: any) => {
-    setSelectedMenu(menus);
+  const openUpdateModal = (menu: any) => {
+    setSelectedMenu(menu);
     setIsModalOpen(true);
   };
 
