@@ -23,7 +23,16 @@ npm run dev
 
 
 ## Demo Preview
-![alt text](demo.png)
+![alt text](/public/preview/demo.png)
+![alt text](/public/preview/image.png)
+
+
+CRUD Preview for Customer List
+![alt text](/public/preview/customer.png)
+
+
+CRUD Preview for  Menu List
+![alt text](/public/preview/menu.png)
 
 ## Store Management Setup
 2. Redux Store: The store is configured with slices for modular state management.
