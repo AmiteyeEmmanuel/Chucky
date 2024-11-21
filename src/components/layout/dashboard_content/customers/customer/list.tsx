@@ -8,7 +8,7 @@ function List() {
   );
 
   return (
-    <Card className="flex flex-col h-[70vh] md:h-[60vh]">
+    <Card className="flex flex-col h-[60vh]">
       {/* Header Section */}
       <section className="flex justify-between gap-2 text-black px-6 py-3">
         <div className="flex flex-col">
