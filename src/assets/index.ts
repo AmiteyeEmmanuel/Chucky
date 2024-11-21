@@ -15,7 +15,7 @@ import activeAnalyticsIcon from "./svg/Chart.svg";
 import activeDashboardIcon from "./img/dashboardicon.jpg";
 
 // img
-import Logo from "./svg/logo.svg";
+import Logo from "./logo.jpg";
 import searchIcon from "./img/search.jpg";
 import noficationBell from "./img/notification.jpg";
 import messageIcon from "./img/message.jpg";

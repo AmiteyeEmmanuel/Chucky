@@ -21,22 +21,18 @@ function Sidebar({ menuCollapsed }: SidebarProps) {
       {/* Sidebar Content */}
       <div>
         {/* Dashboard logo */}
-        <div className="mb-2 text-center flex gap-4">
+        <div className="mb-2 text-center">
           <Link to="/">
             <img
               src={Logo}
-              className="w-14 h-14 bg-[#6C5DD3] relative px-2 rounded-br-3xl rounded-tl-3xl"
+              className="transition-all duration-300 w-full h-full"
               alt="Logo"
             />
           </Link>
-           <div className="text-justify relative bottom-2">
-              <h1 className="text-[30px] font-custom font-[800] text-[#2D2D2D]"> Chucky </h1>
-              <p className="font-custom font-[600] text-[14px] leading-[17.86px] text-[#2D2d2D]"> Admin Dashboard</p>
-           </div>
         </div>
 
         {/* Menu Items */}
-        <div className="mt-20">
+        <div className="mt-24">
           {Menu.map((menu) => {
             const isActive = location.pathname === menu.path;
             return (
