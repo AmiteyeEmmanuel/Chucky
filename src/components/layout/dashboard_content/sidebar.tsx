@@ -30,8 +30,8 @@ function Sidebar({ menuCollapsed }: SidebarProps) {
             />
           </Link>
            <div className="text-justify relative bottom-2">
-              <h1 className="text-[28px] font-custom font-[400] text-[#2D2D2D]"> Chucky </h1>
-              <p className="font-custom font-[400] text-[14px] leading-[17.86px] text-[#2D2d2D]"> Admin Dashboard</p>
+              <h1 className="text-[30px] font-custom font-[800] text-[#2D2D2D]"> Chucky </h1>
+              <p className="font-custom font-[600] text-[14px] leading-[17.86px] text-[#2D2d2D]"> Admin Dashboard</p>
            </div>
         </div>
 
