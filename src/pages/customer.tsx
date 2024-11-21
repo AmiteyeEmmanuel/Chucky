@@ -3,9 +3,11 @@ import CustomerList from "../components/layout/dashboard_content/features/custom
 
 function Customer() {
   return (
-    <DashboardLayout>
-       <CustomerList />
-    </DashboardLayout>
+    <section className="max-w-[1500px] mx-auto  bg-grey-white py-1">
+      <DashboardLayout>
+        <CustomerList />
+      </DashboardLayout>
+    </section>
   );
 }
 

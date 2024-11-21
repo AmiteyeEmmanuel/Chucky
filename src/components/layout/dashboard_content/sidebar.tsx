@@ -4,17 +4,24 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu } from "../../../context/user_menu";
 import { Logo } from "../../../assets";
 import CircularProgress from "../../../widgets/progress_bar";
+import DropdownList from "../../../utils/drop_menu";
 
 interface SidebarProps {
   menuCollapsed: boolean;
 }
+
 function Sidebar({ menuCollapsed }: SidebarProps) {
   const [hoveredMenu, setHoveredMenu] = useState<string | null>(null);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const location = useLocation();
+
+  const toggleDropdown = (menuPath: string) => {
+    setActiveDropdown((prev) => (prev === menuPath ? null : menuPath));
+  };
 
   return (
     <div
-      className={`flex flex-col  h-full md:h-[1150px] justify-between px-5 bg-white pt-8 transform transition-transform duration-300 ${
+      className={`flex flex-col h-full md:h-[1150px] justify-between px-5 bg-white pt-8 transform transition-transform duration-300 ${
         menuCollapsed ? "-translate-x-full" : "translate-x-0"
       } fixed z-40 top-0 left-0 w-[271px] md:relative md:translate-x-0 md:block`}
     >
@@ -38,7 +45,7 @@ function Sidebar({ menuCollapsed }: SidebarProps) {
             return (
               <div
                 key={menu.path}
-                className={`flex items-center mt-[40px] ml-[-0.5rem] text-black text-lg gap-4 py-3 px-6 ${
+                className={`flex flex-col mt-[40px] ml-[-0.5rem] text-black text-lg gap-4 py-3 px-6 ${
                   isActive
                     ? "bg-purple rounded-xl font-bold text-white"
                     : hoveredMenu === menu.path
@@ -48,40 +55,57 @@ function Sidebar({ menuCollapsed }: SidebarProps) {
                 onMouseEnter={() => setHoveredMenu(menu.path)}
                 onMouseLeave={() => setHoveredMenu(null)}
               >
-                <a
-                  href={menu.path}
-                  className={`w-6 cursor-pointer ${
-                    isActive ? "text-white" : "text-black"
-                  }`}
-                >
-                  <img
-                    src={
-                      isActive || hoveredMenu === menu.path
-                        ? menu.activeIcon
-                        : menu.icon
-                    }
-                    alt={menu.name}
-                  />
-                </a>
-                {!menuCollapsed && (
+                {/* Main Menu Item */}
+                <div className="flex items-center gap-4">
                   <a
-                    className={`cursor-pointer ${
-                      isActive ? "text-white py-1 rounded-xl" : ""
-                    }`}
                     href={menu.path}
+                    className={`w-6 cursor-pointer ${
+                      isActive ? "text-white" : "text-black"
+                    }`}
                   >
-                    {menu.name}
-                  </a>
-                )}
-                {/* Icon2 (Optional) */}
-                {menu.icon2 && (
-                  <button className="relative left-[60px] hidden md:block">
                     <img
-                      src={menu.icon2}
-                      alt={`${menu.name} icon`}
-                      className="w-6 h-6"
+                      src={
+                        isActive || hoveredMenu === menu.path
+                          ? menu.activeIcon
+                          : menu.icon
+                      }
+                      alt={menu.name}
                     />
-                  </button>
+                  </a>
+                  {!menuCollapsed && (
+                    <a
+                      className={`cursor-pointer ${
+                        isActive ? "text-white py-1 rounded-xl" : ""
+                      }`}
+                      href={menu.path}
+                    >
+                      {menu.name}
+                    </a>
+                  )}
+                  {/* Dropdown Toggle */}
+                  {menu.icon2 && (
+                    <button
+                      onClick={() => toggleDropdown(menu.path)}
+                      className={`ml-auto ${
+                        isActive ? "text-white" : "text-grey"
+                      }`}
+                    >
+                      <img
+                        src={menu.icon2}
+                        alt={`${menu.name} icon`}
+                        className="w-6 h-6"
+                      />
+                    </button>
+                  )}
+                </div>
+
+                {/* Dropdown List */}
+                {menu.dropdownItems && (
+                  <DropdownList
+                    items={menu.dropdownItems}
+                    isVisible={activeDropdown === menu.path && isActive}
+                    width="100%"
+                  />
                 )}
               </div>
             );
@@ -98,4 +122,3 @@ function Sidebar({ menuCollapsed }: SidebarProps) {
 }
 
 export default Sidebar;
-

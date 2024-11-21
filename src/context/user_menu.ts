@@ -21,6 +21,7 @@ export interface MenuType {
   icon: string | "";
   activeIcon: string | "";
   icon2?:  string | ""
+  dropdownItems?: { name: string; }[];
 }
 
 export const Menu: MenuType[] = [
@@ -38,6 +39,11 @@ export const Menu: MenuType[] = [
     icon: BagIcon,
     icon2: ArrowIcon,
     activeIcon: activeBagIcon,
+    dropdownItems: [
+      { name: "Breakfast" },
+      { name: "Lunch"  },
+      { name: "Dinner" },
+    ],
   },
   {
     id: 3,
