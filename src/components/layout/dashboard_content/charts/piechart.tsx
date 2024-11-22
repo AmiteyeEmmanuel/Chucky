@@ -162,7 +162,7 @@ export function PieGraph() {
         </div>
       </div>
 
-      <CardFooter className="flex gap-2 justify-center">
+      <CardFooter className="flex gap-2 justify-center relative xl:top-14  top-0">
         <div className="flex gap-2">
           <div className="bg-custom-gradient4 w-[12px] h-[12px] rounded-full relative top-[2px]" />
           <p className="text-grey text-[12px] leading-[16px] align-middle font-[600]">
