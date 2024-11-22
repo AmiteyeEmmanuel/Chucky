@@ -35,7 +35,7 @@ function MenuCard() {
 
   const [toggle, setToggle] = useState<string>("all");
   return (
-    <Card className="mt-8 py-8 px-4">
+    <Card className="py-8 px-4">
       {/* Header Section */}
       <section className="flex justify-between gap-2 text-black px-8 mb-1 border-b overflow-scroll">
         <div className="flex flex-col">

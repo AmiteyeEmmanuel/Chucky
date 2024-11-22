@@ -3,7 +3,7 @@ import List from "./customer/list";
 
 function Customer() {
   return (
-    <section className="flex flex-wrap gap-4 transition-all mt-10 w-full ">
+    <section className="flex flex-wrap gap-4 transition-all mt-6 w-full ">
       <div className="xl:w-[68%] w-full">
         <CustomerMap />
       </div>
