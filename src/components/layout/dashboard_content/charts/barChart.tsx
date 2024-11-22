@@ -94,7 +94,7 @@ export const BarChart = () => {
         </div>
       </section>
       <div className="p-8">
-        <h1 className=" leading-[32px] text-[32px] font-[700] pb-20">
+        <h1 className=" leading-[32px] text-[32px] font-[700] pb-20 font-san">
           {" "}
           $112,340
         </h1>

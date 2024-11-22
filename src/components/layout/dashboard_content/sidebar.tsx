@@ -39,7 +39,7 @@ function Sidebar({ menuCollapsed }: SidebarProps) {
         </div>
 
         {/* Menu Items */}
-        <div className="mt-24">
+        <div className="mt-20">
           {Menu.map((menu) => {
             const isActive = location.pathname === menu.path;
             return (

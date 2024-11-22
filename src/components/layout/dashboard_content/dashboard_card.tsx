@@ -2,7 +2,7 @@ import { cardData } from "../../data/card_data";
 
 function DashboardCard() {
   return (
-    <div className="flex flex-wrap gap-4 w-full">
+    <div className="flex flex-wrap gap-4 w-full mt-6">
       {cardData.map((card) => (
         <div className="shadow-md bg-white rounded-md w-full sm:w-[48%] xl:w-[23.7%] h-[182px] p-6">
         <img

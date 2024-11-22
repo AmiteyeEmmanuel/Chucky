@@ -92,12 +92,12 @@ function MenuCard() {
       </section>
       <div className="mt-4">
         <div className="pb-0 h-auto">
-          <div className="lg:flex block gap-4 transition-all w-full ">
+          <div className="lg:flex block gap-2 transition-all lg:w-[98%] w-full ">
             <Swiper
               navigation
               spaceBetween={20}
               slidesPerView={1}
-              className="lg:w-[62%] w-full lg:pb-0 mb-4"
+              className="lg:w-[63%] w-full lg:pb-0 mb-4"
             >
               {toggle === "all" &&
                 menus.map((menu) => (
@@ -170,7 +170,7 @@ function MenuCard() {
           navigation
           spaceBetween={20}
           slidesPerView={slidesPerView}
-          className="w-full mt-5 swiper-container"
+          className="w-full swiper-container"
         >
           {menus2.map((menu2) => (
             <SwiperSlide key={menu2.id}>

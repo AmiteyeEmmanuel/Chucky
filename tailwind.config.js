@@ -9,7 +9,7 @@ export default {
   	extend: {
   		fontFamily: {
   			sans: ['Inter'],
-			custom: [ 'Crete Round']
+			custom:  'Crete Round'
   		},
   		colors: {
   			white: '#fff',
