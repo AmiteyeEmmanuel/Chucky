@@ -37,14 +37,14 @@ function MenuCard() {
   return (
     <Card className="py-8 px-4">
       {/* Header Section */}
-      <section className="flex justify-between gap-2 text-black px-8 mb-1 border-b overflow-scroll">
+      <section className="flex justify-between gap-2 text-black mb-1 border-b">
         <div className="flex flex-col">
-          <p className="font-[700] text-[18px] leading-[24px] text-off-black">
+          <p className="font-[700] text-[18px] px-2 leading-[24px] text-off-black">
             Menu
           </p>
         </div>
 
-        <div className="flex gap-5 text-base font-medium text-[#5F6D7E]">
+        <div className="flex gap-5 text-base font-medium  text-[#5F6D7E] overflow-scroll px-10">
           <button
             className={`py-2 cursor-pointer leading-[22px] font-[600] text-[15px]  ${
               toggle === "all"
