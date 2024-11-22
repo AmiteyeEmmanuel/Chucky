@@ -35,16 +35,16 @@ function MenuCard() {
 
   const [toggle, setToggle] = useState<string>("all");
   return (
-    <Card className="py-8 px-4">
+    <Card className="py-8">
       {/* Header Section */}
-      <section className="flex justify-between gap-2 text-black mb-1 border-b">
+      <section className="flex justify-between gap-2 text-black mb-1 border-b w-full">
         <div className="flex flex-col">
-          <p className="font-[700] text-[18px] px-2 leading-[24px] text-off-black">
+          <p className="font-[700] text-[18px] px-6 leading-[24px] text-off-black">
             Menu
           </p>
         </div>
 
-        <div className="flex gap-5 text-base font-medium  text-[#5F6D7E] overflow-scroll px-10">
+        <div className="flex gap-5 text-base font-medium  text-[#5F6D7E] overflow-scroll lg:pr-20 pr-4">
           <button
             className={`py-2 cursor-pointer leading-[22px] font-[600] text-[15px]  ${
               toggle === "all"
@@ -90,7 +90,7 @@ function MenuCard() {
           </button>
         </div>
       </section>
-      <div className="mt-4">
+      <div className="mt-4 px-4">
         <div className="pb-0 h-auto">
           <div className="lg:flex block gap-2 transition-all lg:w-[98%] w-full ">
             <Swiper
